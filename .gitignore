@@ -1,0 +1,20 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Debug files
+app/data/debug_cart_alert.html
+
+# Sensitive data
+app/data/amazon_cookies.json
+
+# OS files
+.DS_Store
+Thumbs.db
