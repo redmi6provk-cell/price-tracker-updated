@@ -50,6 +50,8 @@ cp .env.example .env
 # 6. Add your data files
 # Place amazon_cookies.json and amazon_products.json in app/data/
 
+tmux attach -t pricebot
+
 # 7. Run
 python main.py
 ```

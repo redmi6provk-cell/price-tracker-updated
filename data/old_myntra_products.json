@@ -1,0 +1,465 @@
+[
+    {
+        "name": "Men Set of 2 Fresh Power Long Lasting Roll On Deodorants - 50 ml Each",
+        "url": "https://www.myntra.com/22080116",
+        "desired_price": 225,
+        "id": "70bb8b41-64af-44df-8395-e38ebe72988d",
+        "pdp_price": 313.0,
+        "best_price": 281.0,
+        "mrp": 498.0,
+        "last_scanned_price": 281.0,
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "prices": [
+            {
+                "price": 281.0,
+                "timestamp": "2026-03-05T08:04:33.406871"
+            },
+            {
+                "price": 281.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 281.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 281.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ],
+        "lowest_notified_price": null
+    },
+    {
+        "name": "Men Set Of 2 Deep Impact 48Hr Freshness Deodorant Roll-On 50ml Each - Black Carbon",
+        "url": "https://www.myntra.com/27771720",
+        "desired_price": 250,
+        "id": "89fd91e7-7063-4c12-bfa9-2624151b1f2b",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 298.0,
+        "best_price": 268.0,
+        "mrp": 498.0,
+        "last_scanned_price": 268.0,
+        "prices": [
+            {
+                "price": 268.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 268.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 268.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Women Set Of 2 Pearl & Beauty Fine Fragrance 48Hr Deodorant Roll-On - 50ml Each",
+        "url": "https://www.myntra.com/27771726",
+        "desired_price": 250,
+        "id": "e38a1d75-5143-42c9-8602-89ed8a530cad",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 498.0,
+        "best_price": null,
+        "mrp": null,
+        "last_scanned_price": 498.0,
+        "prices": [
+            {
+                "price": 498.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 498.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 498.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Women Set Of 2 Natural Glow Sensitive 48Hr Protection Roll-On Deodorant - 50ml Each",
+        "url": "https://www.myntra.com/27771732",
+        "desired_price": 250,
+        "id": "946f6ffb-2f0a-4607-9517-45db7d6803c4",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 498.0,
+        "best_price": null,
+        "mrp": null,
+        "last_scanned_price": 498.0,
+        "prices": [
+            {
+                "price": 498.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 498.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 498.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Women Set Of 2 Pearl & Beauty Radiance 48Hr Freshness Deodorant Roll-On - 50ml Each",
+        "url": "https://www.myntra.com/27771748",
+        "desired_price": 250,
+        "id": "eb5b5756-424f-4198-9153-6dce9ffc9f66",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 298.0,
+        "best_price": 268.0,
+        "mrp": 498.0,
+        "last_scanned_price": 268.0,
+        "prices": [
+            {
+                "price": 268.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 268.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 268.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Men Set of 2 Cool Kick Roll-On Deodorant",
+        "url": "https://www.myntra.com/9720513",
+        "desired_price": 250,
+        "id": "b1b47252-85ab-4202-b9f2-db540f953ae4",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 288.0,
+        "best_price": 259.0,
+        "mrp": 498.0,
+        "last_scanned_price": 259.0,
+        "prices": [
+            {
+                "price": 259.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 259.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 259.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Set of Whitening Smooth Skin - Pearl & Beauty Roll-On Deodorants",
+        "url": "https://www.myntra.com/15060800",
+        "desired_price": 250,
+        "id": "85c25d18-30bf-4f35-a026-092a1077b597",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": 249.0,
+        "pdp_price": 249.0,
+        "best_price": null,
+        "mrp": 498.0,
+        "last_scanned_price": 249.0,
+        "prices": [
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Men Set of 2 Protect & Care Roll-On Deodorants",
+        "url": "https://www.myntra.com/9720499",
+        "desired_price": 250,
+        "id": "65eeb8ed-a59e-4a60-a571-a335440e62c6",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 288.0,
+        "best_price": 259.0,
+        "mrp": 498.0,
+        "last_scanned_price": 259.0,
+        "prices": [
+            {
+                "price": 259.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 259.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 259.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "NIVEA Women Set of 2 Pearl & Beauty Radiance Deodorant Roll-On - 50ml",
+        "url": "https://www.myntra.com/29274520",
+        "desired_price": 250,
+        "id": "8122fefc-ea16-46af-9dc7-0181113bb9b3",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": 249.0,
+        "pdp_price": 249.0,
+        "best_price": null,
+        "mrp": 498.0,
+        "last_scanned_price": 249.0,
+        "prices": [
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Men Set of 2 Cool Kick Roll-On 48h Deodorant - 50 ml Each",
+        "url": "https://www.myntra.com/29274508",
+        "desired_price": 250,
+        "id": "fee8855c-c392-4c14-bd37-3b8a8ded75e0",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": 249.0,
+        "pdp_price": 249.0,
+        "best_price": null,
+        "mrp": 498.0,
+        "last_scanned_price": 249.0,
+        "prices": [
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 249.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Women Set of 3 Water Lily & Oil Shower Gel",
+        "url": "https://www.myntra.com/6843203",
+        "desired_price": 350,
+        "id": "8d6d38d3-7990-49e8-9613-25ca1a4c7380",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 792.0,
+        "best_price": null,
+        "mrp": 990.0,
+        "last_scanned_price": 792.0,
+        "prices": [
+            {
+                "price": 792.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 792.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 792.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Men Set of 3 Fresh Active Long Lasting Deodorant",
+        "url": "https://www.myntra.com/11497418",
+        "desired_price": 350,
+        "id": "de41ad8f-244b-4071-a2ec-dbd340bb5778",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 472.0,
+        "best_price": null,
+        "mrp": 945.0,
+        "last_scanned_price": 472.0,
+        "prices": [
+            {
+                "price": 472.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 472.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 472.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Unisex Soft Light Moisturizing Non-Sticky Cream with Vitamin E & Jojoba Oil -300 ml",
+        "url": "https://www.myntra.com/624897",
+        "desired_price": 260,
+        "id": "c694688c-1243-4c1f-aac5-2b3e5b8bd824",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 362.0,
+        "best_price": null,
+        "mrp": 725.0,
+        "last_scanned_price": 362.0,
+        "prices": [
+            {
+                "price": 362.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 362.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 362.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Women Set of 2 Natural Glow Smooth Skin Roll On Deodorants - 50 ml Each",
+        "url": "https://www.myntra.com/22080114",
+        "desired_price": 250,
+        "id": "4b9e8f08-5995-40e4-a9c2-b7c340419e0f",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 258.0,
+        "best_price": null,
+        "mrp": 498.0,
+        "last_scanned_price": 258.0,
+        "prices": [
+            {
+                "price": 258.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 258.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 258.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Set Of 3 Shower Gel - Water Lily & Oil + Lemon & Oil + Frangipani & Oil - 250ml Each",
+        "url": "https://www.myntra.com/22080140",
+        "desired_price": 360,
+        "id": "0fe41500-fd62-4e80-9171-a8c6bdf0b4cc",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 495.0,
+        "best_price": null,
+        "mrp": 990.0,
+        "last_scanned_price": 495.0,
+        "prices": [
+            {
+                "price": 495.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 495.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 495.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "Men Set Of 2 Fresh Active Deodorant Roll On with Ocean Extracts - 50ml Each",
+        "url": "https://www.myntra.com/22080122",
+        "desired_price": 250,
+        "id": "325e76ef-cc9b-4984-a12c-1fdc1ac366d3",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": null,
+        "pdp_price": 263.0,
+        "best_price": null,
+        "mrp": 498.0,
+        "last_scanned_price": 263.0,
+        "prices": [
+            {
+                "price": 263.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 263.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 263.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    },
+    {
+        "name": "CETAPHIL Gentle Skin Cleanser With & Pro-Vitamin B5 & B3 - 118 ml",
+        "url": "https://www.myntra.com/16712624",
+        "desired_price": "350",
+        "id": "c7db53f5-8009-4cf8-a820-859a71ed8685",
+        "scan_status": "scanned",
+        "last_scanned_at": "2026-03-05T13:27:00.209061",
+        "lowest_notified_price": 338.0,
+        "pdp_price": 403.0,
+        "best_price": 338.0,
+        "mrp": 459.0,
+        "last_scanned_price": 338.0,
+        "prices": [
+            {
+                "price": 338.0,
+                "timestamp": "2026-03-05T11:52:47.416299"
+            },
+            {
+                "price": 338.0,
+                "timestamp": "2026-03-05T12:36:07.096659"
+            },
+            {
+                "price": 338.0,
+                "timestamp": "2026-03-05T13:27:00.209061"
+            }
+        ]
+    }
+]

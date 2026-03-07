@@ -5,11 +5,18 @@ import re
 import sys
 from bs4 import BeautifulSoup
 from playwright.async_api import async_playwright
+from dotenv import load_dotenv
 from app.notifications import send_telegram_alert
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+load_dotenv()
+
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 COOKIES_PATH = os.path.join(DATA_DIR, "amazon_cookies.json")
 PRODUCTS_PATH = os.path.join(DATA_DIR, "amazon_products.json")
+
+# ─── Browser config from .env ──────────────────────────────
+BROWSER_HEADLESS = os.getenv("BROWSER_HEADLESS", "false").strip().lower() == "true"
+BROWSER_CLOSE    = os.getenv("BROWSER_CLOSE",    "false").strip().lower() == "true"
 
 
 # ─── Cookie Helpers ───────────────────────────────────────
@@ -151,19 +158,20 @@ def compare_with_desired_prices(decreased_items: list[dict]) -> list[dict]:
 
 # ─── Main Scanner ─────────────────────────────────────────
 
-async def run_scan() -> dict:
+async def run_scan(cookie_filename="amazon_cookies.json", account_name="AMAZON") -> dict:
     """Full scan: open Amazon cart, extract alerts, compare, notify Telegram."""
     print("\n" + "=" * 60)
     print("🔍 AMAZON CART SCAN STARTED")
     print("=" * 60)
 
     # Load cookies
-    if not os.path.exists(COOKIES_PATH):
-        print("❌ amazon_cookies.json not found")
-        return {"error": "amazon_cookies.json not found"}
+    cookies_path = os.path.join(DATA_DIR, cookie_filename)
+    if not os.path.exists(cookies_path):
+        print(f"❌ {cookie_filename} not found")
+        return {"error": f"{cookie_filename} not found"}
 
     try:
-        with open(COOKIES_PATH, "r") as f:
+        with open(cookies_path, "r") as f:
             raw_cookies = json.load(f)
         cookies = sanitize_cookies(raw_cookies)
         print(f"✅ Loaded {len(cookies)} cookies")
@@ -171,12 +179,16 @@ async def run_scan() -> dict:
         print(f"❌ Error reading cookies: {e}")
         return {"error": str(e)}
 
-    # Launch browser (headless for cloud deployment)
+    # Launch browser (controlled by .env BROWSER_HEADLESS)
     pw = await async_playwright().start()
-    browser = await pw.chromium.launch(headless=True)
+    browser = await pw.chromium.launch(
+        headless=BROWSER_HEADLESS,
+        args=["--disable-blink-features=AutomationControlled", "--no-sandbox"],
+    )
     context = await browser.new_context()
     page = await context.new_page()
-    print("✅ Browser launched (headless)")
+    mode_label = "headless" if BROWSER_HEADLESS else "headful"
+    print(f"✅ Browser launched ({mode_label})")
 
     try:
         # 1. Open Amazon
@@ -210,11 +222,7 @@ async def run_scan() -> dict:
         cart_alert_html = await cart_alert_elem.inner_html()
         print(f"✅ Cart alert found ({len(cart_alert_html)} chars)")
 
-        # Debug: save raw HTML for inspection
-        debug_path = os.path.join(DATA_DIR, "debug_cart_alert.html")
-        with open(debug_path, "w", encoding="utf-8") as df:
-            df.write(cart_alert_html)
-        print(f"📝 Debug HTML saved to {debug_path}")
+
 
         # 6. Parse price decreases
         print("\n📋 Parsing price decreases...")
@@ -225,41 +233,45 @@ async def run_scan() -> dict:
             print("ℹ️  No price decreases found")
             return {"greeting": greeting, "decreased_items": []}
 
-        # 7. Send price drop Telegram alert
-        lines = ["🔔 <b>Amazon Cart Price Drops</b>\n"]
-        for item in decreased_items:
-            lines.append(
-                f'📉 <a href="{item["link"]}">{item["name"]}</a>\n'
-                f'   ₹{item["old_price"]} → ₹{item["new_price"]}'
-            )
-        await send_telegram_alert("\n\n".join(lines))
 
-        # 8. Compare with desired prices
+
+        # 7. Compare with desired prices — only care about desired-price hits
         print("\n📊 Comparing with desired prices...")
         decreased_items = compare_with_desired_prices(decreased_items)
 
-        # 9. Send comparison Telegram alert
-        cmp_lines = ["🎯 <b>Price Drop vs Desired Price</b>\n"]
-        for item in decreased_items:
-            if item.get("drop_amount") is not None:
-                status = "✅ AT/BELOW TARGET" if item["hit_desired"] else "⏳ Above target"
-                desired_str = f'₹{item["desired_price"]}' if item["desired_price"] else "N/A"
-                emoji = "🟢" if item["hit_desired"] else "🟡"
-                cmp_lines.append(
-                    f'{emoji} {item["name"]}\n'
-                    f'   New: ₹{item["new_price"]} | Drop: ₹{item["drop_amount"]} ({item["drop_pct"]}%)\n'
-                    f"   Desired: {desired_str} | {status}"
-                )
-        if len(cmp_lines) > 1:
-            await send_telegram_alert("\n\n".join(cmp_lines))
+        hits     = [item for item in decreased_items if item.get("hit_desired")]
+        non_hits = [item for item in decreased_items if not item.get("hit_desired")
+                    and item.get("drop_amount") is not None]
 
-        print("\n✅ SCAN COMPLETE")
+        # Log non-hits to console only (no Telegram)
+        for item in non_hits:
+            desired_str = f'₹{item["desired_price"]}' if item["desired_price"] else "N/A"
+            print(f'  🎯 {item["name"][:60]}: drop ₹{item["drop_amount"]} ({item["drop_pct"]}%) | desired: {desired_str} | ❌ above')
+
+        # 8. Send Telegram alert ONLY for desired-price hits
+        if hits:
+            alert_lines = [f"🎯 <b>Amazon ({account_name.upper()}) — Target Price Hit!</b>\n"]
+            for item in hits:
+                desired_str = f'₹{item["desired_price"]}' if item["desired_price"] else "N/A"
+                alert_lines.append(
+                    f'✅ <a href="{item["link"]}">{item["name"]}</a>\n'
+                    f'   ₹{item["old_price"]} → ₹{item["new_price"]} | Target: {desired_str}'
+                )
+                print(f'  ✅ TARGET HIT: {item["name"][:60]}: ₹{item["new_price"]} ≤ desired {desired_str}')
+            await send_telegram_alert("\n\n".join(alert_lines), platform="AMAZON")
+        else:
+            print("  ℹ️  No items hit desired price — no Telegram alert sent")
+
+        drop_count = len(decreased_items)
+        hit_count  = len(hits)
+        if BROWSER_CLOSE:
+            await browser.close()
+            await pw.stop()
+            print("\n✅ SCAN COMPLETE — browser closed")
+        else:
+            print("\n✅ SCAN COMPLETE — browser left open")
         return {"greeting": greeting, "decreased_items": decreased_items}
 
     except Exception as e:
         print(f"❌ SCAN FAILED: {e}")
         return {"error": str(e)}
-    finally:
-        await browser.close()
-        await pw.stop()
-        print("🔒 Browser closed")
