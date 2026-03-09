@@ -37,8 +37,7 @@ RUN_MYNTRA = not args.no_myntra and not args.amazon_only
 
 async def amazon_loop():
     accounts = [
-        {"file": "amazon_one_cookies.json", "name": "Account 1"},
-        {"file": "amazon_two_cookies.json", "name": "Account 2"}
+        {"file": "amazon_cookies.json", "name": "Main Account"}
     ]
     while True:
         for acc in accounts:
